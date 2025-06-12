@@ -1,7 +1,7 @@
 @extends('frontend.inc.main')
 @section('title')
     <title>
-        DONQUIXOTE | HISTORY PEMESANAN</title>
+        Augustine Prevost Hotel | HISTORY PEMESANAN</title>
 @endsection
 
 @section('content')

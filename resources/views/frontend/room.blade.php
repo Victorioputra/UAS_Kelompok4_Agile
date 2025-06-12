@@ -1,6 +1,6 @@
 @extends('frontend.inc.main')
 @section('title')
-    <title>DONQUIXOTE | KAMAR #{{ $room->no }}</title>
+    <title>Augustine Prevost Hotel | KAMAR #{{ $room->no }}</title>
 @endsection
 
 @section('css')

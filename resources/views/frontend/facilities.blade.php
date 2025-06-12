@@ -1,10 +1,10 @@
 
 @extends('frontend.inc.main')
-@section('title') <title>DONQUIXOTE | FASILITAS HOTEL KAMI</title> @endsection
+@section('title') <title>Augustine Prevost Hotel | FASILITAS HOTEL KAMI</title> @endsection
 
 @section('content')
 <div class="my-5 px-4">
-  <h2 class="fw-bold h-font text-center">OUR FACILITIES</h2>
+  <h2 class="fw-bold h-font text-center" style="color: white;">OUR FACILITIES</h2>
 
   <div class="h-line bg-dark"></div>
 

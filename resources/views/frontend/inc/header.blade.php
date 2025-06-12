@@ -1,37 +1,40 @@
 <nav class="navbar navbar-expand-lg px-lg-3 py-lg-2 shadow sticky-top">
     <div class="container">
-        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="/"><img src="/img/logo.png" style="max-width:90px"> <span class="h5 fw-bold fs-3"> DONQUIXOTE </span> </a>
+        <a class="navbar-brand me-5 fw-bold fs-3 h-font text-white " href="/"><img src="storage\app\public\logo" style="max-width:90px" > <span class="h5 fw-bold fs-3"> Augustine Prevost Hotel </span> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Donquixote</h5>
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: white;">Augustine Prevost Hotel</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                          <a class="nav-link {{ Request::routeIs('index*') ? 'active' : ''}}" aria-current="page" href="/">Home</a>
+                          <a class="nav-link {{ Request::routeIs('index*') ? 'active' : ''}}" aria-current="page" href="/" style="color: white;">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link me-2 {{ Request::is('rooms*') ? 'active' : ''}} " href="/rooms">Rooms</a>
+                          <a class="nav-link me-2 {{ Request::is('rooms*') ? 'active' : ''}} " href="/rooms" style="color: white;">Rooms</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link me-2 {{ Request::is('facilities*') ? 'active' : ''}}" href="/facilities">Facilities</a>
+                          <a class="nav-link me-2 {{ Request::is('facilities*') ? 'active' : ''}}" href="/facilities" style="color: white;">Facilities</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link me-2 {{ Request::is('about*') ? 'active' : ''}}" href="/about">About</a>
+                            <a class="nav-link me-2 {{ Request::is('about*') ? 'active' : ''}}" href="/about" style="color: white;">About</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link me-2 {{ Request::is('contact*') ? 'active' : ''}}" href="/contact">Contact</a>
+                          <a class="nav-link me-2 {{ Request::is('contact*') ? 'active' : ''}}" href="/contact" style="color: white;">Contact</a>
                         </li>
 
                         @if(auth()->user())
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
-                            </a>
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                            <path fill="white" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                            </svg>
+                         </a>
+
                             <ul class="dropdown-menu ">
                                 @if(auth()->user()->is_admin == 1)
                                     <li><a class="dropdown-item" href="/dashboard">

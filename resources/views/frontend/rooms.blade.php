@@ -1,6 +1,6 @@
 @extends('frontend.inc.main')
 @section('title')
-    <title>DONQUIXOTE | Cari Kamar</title>
+    <title>Augustine Prevost Hotel | Cari Kamar</title>
 @endsection
 
 @section('content')

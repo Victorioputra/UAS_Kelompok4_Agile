@@ -1,5 +1,5 @@
 @extends('frontend.inc.main')
-@section('title') <title>DONQUIXOTE | TENTANG KAMI</title> @endsection
+@section('title') <title>Augustine Prevost Hotel | TENTANG KAMI</title> @endsection
 
 @section('content')
 
@@ -34,8 +34,8 @@
       <div class="col-lg-6 col-md-5 mb-4 justify order-lg-1 order-md-1 order-2 text-center mt-4 mt-lg-0 mt-md-0">
         <h3 class="mb-3 ">About us</h3>
         <p>
-          Perusahaan Donquixote telah berdiri sejak tahun 2022, Dimulai dari satu bangunan hotel yang tidak terlalu besar dan hanya menyewakan beberapa kamar.
-          Namun kini Perusahaan Donquixote telah mempunyai Kamar lebih dari 20 Kamar. Fasilitas yang ada di Perusahaan Donquixote diantara lain adalah Kolam renang pribadi, Ruangan Merokok, Gratis Wifi, Sarapan, dan Makan Siang.
+          Perusahaan Augustine Prevost Hotel telah berdiri sejak tahun 2022, Dimulai dari satu bangunan hotel yang tidak terlalu besar dan hanya menyewakan beberapa kamar.
+          Namun kini Perusahaan Augustine Prevost Hotel telah mempunyai Kamar lebih dari 20 Kamar. Fasilitas yang ada di Perusahaan Augustine Prevost Hotel diantara lain adalah Kolam renang pribadi, Ruangan Merokok, Gratis Wifi, Sarapan, dan Makan Siang.
         </p>
       </div>
       <div class="col-lg-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">

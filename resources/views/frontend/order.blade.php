@@ -1,6 +1,6 @@
 @extends('frontend.inc.main')
 @section('title')
-    <title>DONQUIXOTE | ORDER NOW</title>
+    <title>Augustine Prevost Hotel | ORDER NOW</title>
 @endsection
 
 @section('content')

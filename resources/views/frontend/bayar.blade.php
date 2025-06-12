@@ -1,6 +1,6 @@
 @extends('frontend.inc.main')
 @section('title')
-    <title>DONQUIXOTE | FORM BUKTI PEMBAYARAN</title>
+    <title>Augustine Prevost Hotel | FORM BUKTI PEMBAYARAN</title>
 @endsection
 
 @section('content')

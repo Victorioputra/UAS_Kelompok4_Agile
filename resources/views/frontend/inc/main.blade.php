@@ -15,11 +15,9 @@
 		}
 
 		.bg-custom,.btn-custom {
-			background-color: #EAC117;
+            background-color:rgb(55, 71, 117);
+			color:rgb(255, 255, 255);
 		}
-        .btn-custom:hover{
-            background-color: #bf9c08;
-        }
 
 		.swiper-slide img {
 			width: 100%;
@@ -46,12 +44,12 @@
             transition: all 0.3s;
         }
         .navbar {
-        background-color: rgba(234, 193, 23, 1); /* Warna latar belakang navbar */
+        background-color: #1A2238; /* Warna latar belakang navbar */
         transition: background-color 0.3s ease; /* Efek transisi saat mengubah warna latar belakang */
         }
 
         .navbar.scrolled {
-        background-color: rgba(234, 193, 23, 0.8); /* Warna latar belakang navbar yang lebih transparan saat di-scroll */
+        background-color: rgba(17, 23, 51, 0.8); /* Warna latar belakang navbar yang lebih transparan saat di-scroll */
         }
         .box{
             border-top-color: var(--teal) !important;

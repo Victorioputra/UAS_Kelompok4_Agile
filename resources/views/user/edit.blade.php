@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DONQUIXOTE | Edit Fotor Profile</title>
+	<title>Augustine Prevost Hotel | Edit Fotor Profile</title>
 	<!-- CSS only -->
 @include('frontend.inc.links')
 
