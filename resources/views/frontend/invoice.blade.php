@@ -59,8 +59,8 @@
                             <header class="clearfix">
                         <h1 class="mb-5" style="text-align: center">INVOICE <span class="h4">#{{ $p->invoice }}</span></h1>
                         <div id="company" class="clearfix">
-                            <div>Cakra Gusdani</div>
-                            <div>Smk Bina Mandiri Multimedia,<br /> Cileungsi, Jawa Barat</div>
+                            <div>Augustine</div>
+                            <div>Augustine Prevost Hotel,<br /> Piazza San Pietro, 00120 Citta del Vaticano, Vatikan</div>
                             <div>+62 85773674231</div>
                             <div><a>Anggergusdani@gmail.com</a></div>
                         </div>

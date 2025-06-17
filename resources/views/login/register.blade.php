@@ -7,6 +7,8 @@
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+
+	
 </head>
 <body>
     @if (session()->has('loginError'))
@@ -17,15 +19,15 @@
 
     @endif
 
-	<img class="wave" src="/loginn/img/wave.png">
+	<img class="wave" src="/loginn/img/wave.jpg">
 	<div class="container">
 		<div class="img">
-			<img src="/loginn/img/bg.svg">
+			<img src="/loginn/img/bg.png">
 		</div>
 		<div class="login-content">
 			<form action="/register" method="post">
                 @csrf
-				<img src="/loginn/img/avatar.svg">
+				<img src="/loginn/img/avatar.jpg">
 				<h2 class="title">Register</h2>
            		<div class="input-div one">
            		   <div class="i">

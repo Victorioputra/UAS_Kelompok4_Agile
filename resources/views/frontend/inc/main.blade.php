@@ -48,6 +48,8 @@
         transition: background-color 0.3s ease; /* Efek transisi saat mengubah warna latar belakang */
         }
 
+       
+
         .navbar.scrolled {
         background-color: rgba(17, 23, 51, 0.8); /* Warna latar belakang navbar yang lebih transparan saat di-scroll */
         }

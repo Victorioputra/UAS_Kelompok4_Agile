@@ -3,7 +3,7 @@
     <div class="row">
 
         @foreach ($room as $r)
-            <div class="col-lg-4 col-md-6 my-3">
+            <div class="col-lg-4 col-md-6 my-3" data-aos="fade-up">
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     @if ($r->images->count() > 0)
                         <img src="{{ asset('storage/' . $r->images[0]->image) }}" class="img-fluid rounded"

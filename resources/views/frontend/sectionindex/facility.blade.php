@@ -1,7 +1,7 @@
 <h2 class="mb-4 text-center fw-bold h-font">OUR FACILITIES</h2>
 
 <div class="container">
-    <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+    <div class="row justify-content-evenly px-lg-0 px-md-0 px-5" data-aos="fade-up">
         <div class="col-lg-2 col-md-2 text-center text-black bg-white rounded shadow py-4 my-3">
             <img src="/frontend/img/fasilitas/1.jpg" width="80px">
             <h5 class="mt-3">Swimming Pool</h5>

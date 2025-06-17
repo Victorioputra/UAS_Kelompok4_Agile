@@ -5,16 +5,14 @@
 
 @section('content')
     <div class="my-5 px-4">
-        <h2 class="fw-bold h-font text-center">OUR ROOMS</h2>
-        <p class="h5 mt-3 text-center">{{ $roomsCount }} Rooms Availlable</p>
-        <div class="h-line bg-dark"></div>
-
+        <h2 class="fw-bold h-font text-center" data-aos="fade-down">OUR ROOMS</h2>
+        <p class="h5 mt-3 text-center" data-aos="fade-down" data-aos-delay="100">{{ $roomsCount }} Rooms Availlable</p>
+        <div class="h-line bg-dark" data-aos="zoom-in" data-aos-delay="200"></div>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-12 mb-lg-0 mb-4 px-0">
-
+            <div class="col-lg-3 col-md-12 mb-lg-0 mb-4 px-0" data-aos="fade-right">
                 <nav class="navbar navbar-expand-lg navbar-light bg-white rounded shadow">
                     <div class="container-fluid flex-lg-column align-items-stretch">
                         <h4 class="mt-2">FILTERS</h4>
@@ -33,21 +31,6 @@
                                     <label class="form-label">Check-out</label>
                                     <input type="date" name="to" class="form-control shadow-none">
                                 </div>
-                                {{-- <div class="border bg-light p-3 rounded mb-3">
-        <h5 class="mb-3" style="font-size: 18px;">FACILITIES</h5>
-        <div class="mb-2">
-          <input type="checkbox" id="f1" class="form-check-input shadow-none me-1">
-          <label class="form-check-label" for="f1">Facility one</label>
-        </div>
-        <div class="mb-2">
-            <input type="checkbox" id="f1" class="form-check-input shadow-none me-1">
-          <label class="form-check-label" for="f2">Facility two</label>
-        </div>
-        <div class="mb-2">
-          <input type="checkbox" id="f1" class="form-check-input shadow-none me-1">
-          <label class="form-check-label" for="f3">Facility three</label>
-        </div>
-    </div> --}}
                                 <div class="border bg-light p-3 rounded mb-3">
                                     <h5 class="mb-3" style="font-size: 18px;">Person</h5>
                                     <div class="d-flex">
@@ -56,20 +39,15 @@
                                             <input type="number" name="count" class="form-control shadow-none"
                                                 value="1">
                                         </div>
-                                        {{-- <div>
-          <label class="form-label">Children</label>
-          <input type="number" class="form-control shadow-none">
-        </div> --}}
                                     </div>
                                 </div>
-
                                 <div class="container">
                                     <div class="row">
                                         <button class="btn border" type="submit">SEARCH</button>
                                     </div>
                                 </div>
+                            </form>
                         </div>
-                        </form>
                     </div>
                 </nav>
             </div>
@@ -77,16 +55,18 @@
 
             <div class="col-lg-9 col-md-12 px-4">
                 @foreach ($rooms as $r)
-                    <div class="card mb-4 border-0 shadow">
+                    <div class="card mb-4 border-0 shadow" data-aos="fade-up">
                         <div class="row g-0 p-3 align-items-center">
                             <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
-                                @if ($r->images->count() > 0)
-                                    <img src="{{ asset('storage/' . $r->images[0]->image) }}"
-                                        style="max-height:170px; object-fit:cover; width:100%;" class="img-fluid rounded">
-                                @else
-                                    <img src="/img/kamar 1.jpg" style="max-height:150px; object-fit:cover; width:100%;"
-                                        class="img-fluid rounded">
-                                @endif
+                                <div class="room-image-container">
+                                    @if ($r->images->count() > 0)
+                                        <img src="{{ asset('storage/' . $r->images[0]->image) }}"
+                                            style="height:170px; object-fit:cover; width:100%;" class="img-fluid">
+                                    @else
+                                        <img src="/img/kamar 1.jpg" style="height:170px; object-fit:cover; width:100%;"
+                                            class="img-fluid">
+                                    @endif
+                                </div>
                             </div>
 
                             <div class="col-md-5 px-lg-3 px-md-3 px-0">
@@ -191,37 +171,32 @@
 
         </div>
         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-            <h6 class="mb-4 text-success"> IDR {{ number_format($r->price) }} </h6>
-            @if ($request->from)
-                <form action="/order" method="post">
-                    @csrf
-                    <input type="hidden" name="room" value="{{ $r->id }}">
-                    <input type="hidden" name="from" value="{{ $request->from }}">
-                    <input type="hidden" name="to" value="{{ $request->to }}">
-                    <button class="btn btn-sm w-100 btn-light border border-dark shadow-none mb-2">Book now</button>
-                </form>
-                <form action="/rooms/{{ $r->no }}" method="post">
-                    @csrf
-                    <input type="hidden" name="no" value="{{ $r->no }}">
-                    <input type="hidden" name="from" value="{{ $request->from }}">
-                    <input type="hidden" name="to" value="{{ $request->to }}">
-                    <button class="btn btn-sm w-100 btn-dark shadow-none">More details</button>
-                </form>
-            @else
-                <a href="/rooms/{{ $r->no }}"
-                    class="btn btn-sm w-100 btn-light border border-dark shadow-none mb-2">Book Now</a>
-                <a href="/rooms/{{ $r->no }}" class="btn btn-sm w-100 btn-dark shadow-none">More details</a>
-            @endif
+                                <h6 class="mb-4 text-success"> IDR {{ number_format($r->price) }} </h6>
+                                @if (request()->from)
+                                    <form action="/order" method="post" class="mb-2">
+                                        @csrf
+                                        <input type="hidden" name="room" value="{{ $r->id }}">
+                                        <input type="hidden" name="from" value="{{ request()->from }}">
+                                        <input type="hidden" name="to" value="{{ request()->to }}">
+                                        <button class="btn btn-sm w-100 btn-light border border-dark shadow-none">Book now</button>
+                                    </form>
+                                    <form action="/rooms/{{ $r->no }}" method="get">
+                                        <input type="hidden" name="from" value="{{ request()->from }}">
+                                        <input type="hidden" name="to" value="{{ request()->to }}">
+                                        <button class="btn btn-sm w-100 btn-dark shadow-none">More details</button>
+                                    </form>
+                                @else
+                                    <a href="/rooms/{{ $r->no }}" class="btn btn-sm w-100 btn-light border border-dark shadow-none mb-2">Book Now</a>
+                                    <a href="/rooms/{{ $r->no }}" class="btn btn-sm w-100 btn-dark shadow-none">More details</a>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                <div class="d-flex justify-content-center">
+                    {!! $rooms->links() !!}
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-    @endforeach
-    <div class="d-flex justify-content-center">
-        {!! $rooms->links() !!}
-    </div>
-    </div>
-
-
-    </div>
     </div>
 @endsection

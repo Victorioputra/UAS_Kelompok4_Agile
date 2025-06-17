@@ -1,5 +1,6 @@
 <script src="/bs/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper(".swiper-container", {
@@ -47,4 +48,9 @@ if (window.innerWidth < 992) {
 }
 toggleDropdownPosition();
 </script>
+
+<script>
+  AOS.init();
+</script>
+
 @yield('script')

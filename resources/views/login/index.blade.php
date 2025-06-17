@@ -31,15 +31,15 @@
 
     @endif
 
-	<img class="wave" src="/loginn/img/wave.png">
+	<img class="wave" src="/loginn/img/wave.jpg">
 	<div class="container">
 		<div class="img">
-			<img src="/loginn/img/bg.svg">
+			<img src="/loginn/img/bg.png">
 		</div>
 		<div class="login-content">
 			<form action="/login" method="post">
                 @csrf
-				<img src="/loginn/img/avatar.svg">
+				<img src="/loginn/img/avatar.png">
 				<h2 class="title">Login</h2>
            		<div class="input-div one">
            		   <div class="i">
